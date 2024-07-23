@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{862E287D-5E84-439E-A263-583F7D0E04B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_0x7_Protector_GUI</RootNamespace>
+    <AssemblyName>0x7 Protector GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Output\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>0x7.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Confuser.Core">
+      <HintPath>C:\Users\Inx\Desktop\Confuser.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Output\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="dnlib, Version=3.6.0.0, Culture=neutral, PublicKeyToken=50e96378b6e77999, processorArchitecture=MSIL">
+      <HintPath>packages\dnlib.3.6.0\lib\net45\dnlib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Siticone.UI">
+      <HintPath>I:\[ UI ]\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="VMUtils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Output\VMUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Err.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Err.Designer.cs">
+      <DependentUpon>Err.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished.Designer.cs">
+      <DependentUpon>Finished.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI.Designer.cs">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DynConverter\Converter.cs" />
+    <Compile Include="Helpers\DynConverter\Emitter.cs" />
+    <Compile Include="Helpers\DynConverter\ExceptionMapper.cs" />
+    <Compile Include="Helpers\DynConverter\Extension.cs" />
+    <Compile Include="Helpers\Emulator\EmuContext.cs" />
+    <Compile Include="Helpers\Emulator\EmuInstruction.cs" />
+    <Compile Include="Helpers\Emulator\Emulator.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Add.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\And.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Blt.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Br.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\LdcI4.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Ldloc.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Or.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Stloc.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Sub.cs" />
+    <Compile Include="Helpers\Emulator\Instructions\Xor.cs" />
+    <Compile Include="Helpers\Injection\DataInjector.cs" />
+    <Compile Include="Helpers\Injection\InjectHelper.cs" />
+    <Compile Include="Helpers\Injection\Injector.cs" />
+    <Compile Include="Helpers\MethodBlocks\Block.cs" />
+    <Compile Include="Helpers\MethodBlocks\BlockParser.cs" />
+    <Compile Include="Helpers\MethodBlocks\BlockUtils.cs" />
+    <Compile Include="Helpers\MethodBlocks\Extension.cs" />
+    <Compile Include="Helpers\MethodBlocks\Trace.cs" />
+    <Compile Include="Helpers\MutationHelper\Mutation.cs" />
+    <Compile Include="Helpers\MutationHelper\MutationHelper.cs" />
+    <Compile Include="Helpers\RandomHelper.cs" />
+    <Compile Include="ICore\Context.cs" />
+    <Compile Include="ICore\Safe.cs" />
+    <Compile Include="ICore\Utils.cs" />
+    <Compile Include="IProtections\Advanced Junk\JAdder.cs" />
+    <Compile Include="IProtections\AntiTamper\AntiTamperNormal.cs" />
+    <Compile Include="IProtections\AntiTamper\ATGlobal.cs" />
+    <Compile Include="IProtections\AntiTamper\Stuffs\AntiTamperExtensions.cs" />
+    <Compile Include="IProtections\AntiTamper\Stuffs\IKeyDeriver.cs" />
+    <Compile Include="IProtections\AntiTamper\Stuffs\InjectHelper.cs" />
+    <Compile Include="IProtections\AntiTamper\Stuffs\MutationHelper.cs" />
+    <Compile Include="IProtections\AntiTamper\Stuffs\NormalDeriver.cs" />
+    <Compile Include="IProtections\AntiTamper\Stuffs\RandomGenerator.cs" />
+    <Compile Include="IProtections\AntiTamper\Stuffs\Utils.cs" />
+    <Compile Include="IProtections\ControlFlow\ArrayControlFlow\SwitchMangler.cs" />
+    <Compile Include="IProtections\ControlFlow\StrongControlFlow\ControlFlow.cs" />
+    <Compile Include="IProtections\ControlFlow\StrongControlFlow\ControlFlowGraph.cs" />
+    <Compile Include="IProtections\ControlFlow\StrongControlFlow\ManglerBase.cs" />
+    <Compile Include="IProtections\ControlFlow\StrongControlFlow\Predicate.cs" />
+    <Compile Include="IProtections\ControlFlow\StrongControlFlow\SwitchMangler2.cs" />
+    <Compile Include="IProtections\ControlFlow\StrongControlFlow\Utils.cs" />
+    <Compile Include="IProtections\Extra\CallConvertion.cs" />
+    <Compile Include="IProtections\Extra\FakeAttributes.cs" />
+    <Compile Include="IProtections\Extra\MoveEntryPoint.cs" />
+    <Compile Include="IProtections\Extra\Proxy.cs" />
+    <Compile Include="IProtections\Ints\IntMath\IntMathProtection.cs" />
+    <Compile Include="IProtections\Ints\IntMath\INTMHelper.cs" />
+    <Compile Include="IProtections\Ints\LocalToField.cs" />
+    <Compile Include="IProtections\Ints\NumberObfuscation.cs" />
+    <Compile Include="IProtections\Mutation\BlockHandler.cs" />
+    <Compile Include="IProtections\Mutation\BlockType.cs" />
+    <Compile Include="IProtections\Mutation\Int2Math.cs" />
+    <Compile Include="IProtections\Mutation\Int32Local.cs" />
+    <Compile Include="IProtections\Mutation\MutationConfusion.cs" />
+    <Compile Include="IProtections\Software\AntiDump\New\Antidump.cs" />
+    <Compile Include="IProtections\Software\AntiDump\New\AntidumpProtection.cs" />
+    <Compile Include="IProtections\Extra\Flood.cs" />
+    <Compile Include="IProtections\Melting\ConstantMelting.cs" />
+    <Compile Include="IProtections\ReferenceProxy\ReferenceProxy.cs" />
+    <Compile Include="IProtections\Strings\Extra\Base64.cs" />
+    <Compile Include="IProtections\Strings\Extra\HideStrings.cs" />
+    <Compile Include="IProtections\Extra\Junk.cs" />
+    <Compile Include="IProtections\Software\AntiCrack\DetectCrackers.cs" />
+    <Compile Include="IProtections\Software\AntiCrack\DetectCrackers2.cs" />
+    <Compile Include="IProtections\Software\AntiCrack\Global\global.cs" />
+    <Compile Include="IProtections\Software\AntiCrack\Runtime\Runtime.cs" />
+    <Compile Include="IProtections\Software\AntiCrack\Runtime\Runtime2.cs" />
+    <Compile Include="IProtections\Software\AntiDebug\AntiDebug.cs" />
+    <Compile Include="IProtections\Software\AntiDebug\AntiDebugRuntime.cs" />
+    <Compile Include="IProtections\Software\AntiDump\AntiDump.cs" />
+    <Compile Include="IProtections\Software\AntiDump\AntiDumpRuntime.cs" />
+    <Compile Include="IProtections\Software\AntiHttp\AntiHttpRuntime.cs" />
+    <Compile Include="IProtections\Software\AntiHttp\InjectAntiHttp.cs" />
+    <Compile Include="IProtections\ControlFlow\ArrayControlFlow\ControlFlow.cs" />
+    <Compile Include="IProtections\ControlFlow\ArrayControlFlow\ControlFlowGraph.cs" />
+    <Compile Include="IProtections\ControlFlow\ArrayControlFlow\ManglerBase.cs" />
+    <Compile Include="IProtections\ControlFlow\ArrayControlFlow\Predicate.cs" />
+    <Compile Include="IProtections\ControlFlow\ArrayControlFlow\Utils.cs" />
+    <Compile Include="IProtections\Extra\HideMethods.cs" />
+    <Compile Include="IProtections\Software\AntiVM\AntiVMRuntime.cs" />
+    <Compile Include="IProtections\Software\AntiVM\InjectAntiVM.cs" />
+    <Compile Include="IProtections\Strings\Str to field\StringEncryption.cs" />
+    <Compile Include="IProtections\Strings\Str to field\StringEncryptionRuntime.cs" />
+    <Compile Include="IProtections\Strings\Fixed New SE\NewStringEncryption.cs" />
+    <Compile Include="IProtections\Strings\Extension\StringExtension.cs" />
+    <Compile Include="IProtections\Strings\Extra\StringToArray.cs" />
+    <Compile Include="IProtections\Strings\Fixed Xor\Runtime\Runtime.cs" />
+    <Compile Include="IProtections\Strings\Fixed Xor\Services\EncryptionService.cs" />
+    <Compile Include="IProtections\Strings\Fixed Xor\Services\RNGCryptoServiceProviderRandom.cs" />
+    <Compile Include="IProtections\Strings\Fixed Xor\Services\Utils.cs" />
+    <Compile Include="IProtections\Strings\Fixed Xor\StringEncryption.cs" />
+    <Compile Include="IProtections\Sign.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUpdate.Designer.cs">
+      <DependentUpon>NewUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Optimization\Aut.cs" />
+    <Compile Include="Optimization\MethodsOptimization.cs" />
+    <Compile Include="Optimization\OptimizeCode.cs" />
+    <Compile Include="Optimization\ReduceMD.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renaming\Renamer.cs" />
+    <Compile Include="Renaming\SaveNMap.cs" />
+    <Compile Include="Safe\Generator.cs" />
+    <Compile Include="Ui\Config\Colors.cs" />
+    <Compile Include="Ui\Config\Consts.cs" />
+    <Compile Include="Ui\DarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ui\Helpers\DrawHelper.cs" />
+    <Compile Include="Ui\Helpers\MouseStatus.cs" />
+    <Compile Include="Ui\Helpers\StringAlign.cs" />
+    <Compile Include="Ui\Helpers\ThemeColor.cs" />
+    <Compile Include="Ui\ILabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Verification\C53ETA.cs" />
+    <Compile Include="Verification\KeyAuth\KeyAuth.cs" />
+    <Compile Include="Verification\New\Security.cs" />
+    <EmbeddedResource Include="Err.resx">
+      <DependentUpon>Err.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished.resx">
+      <DependentUpon>Finished.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUpdate.resx">
+      <DependentUpon>NewUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\0x7.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="0x7.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
